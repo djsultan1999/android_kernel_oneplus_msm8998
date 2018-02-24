@@ -412,6 +412,17 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -Wno-format-security \
 		   -std=gnu89 $(call cc-option,-fno-PIE) $(CLANG_FLAGS)
 
+KBUILD_CFLAGS += \
+	-Wno-address-of-packed-member \
+	-Wno-unneeded-internal-declaration \
+	-Wno-enum-conversion \
+	-Wno-section \
+	-Wno-duplicate-decl-specifier \
+	-Wno-array-bounds \
+	-Wno-logical-not-parentheses \
+	-Wno-constant-conversion \
+	-Wno-parentheses-equality \
+	-Wno-gcc-compat \
 
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
